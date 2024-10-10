@@ -1,16 +1,4 @@
 @echo off
-set /a Version=1
-echo %Version%
-echo " ____ ___            .___       __  .__                ";
-echo "|    |   \______   __| _/____ _/  |_|__| ____    ____  ";
-echo "|    |   /\____ \ / __ |\__  \\   __\  |/    \  / ___\ ";
-echo "|    |  / |  |_> > /_/ | / __ \|  | |  |   |  \/ /_/  >";
-echo "|______/  |   __/\____ |(____  /__| |__|___|  /\___  / ";
-echo "          |__|        \/     \/             \//_____/  ";
-echo "                                                       ";
-echo ==========================================================
-echo Checking for Updates.
-TIMEOUT /T 1 /NOBREAK >nul
 if /i not "%~1"=="updated" (
     echo Updating %~nx0 ...
     >nul 2>&1 powershell iwr "https://raw.githubusercontent.com/anonPwn/Batch/refs/heads/main/DUCKSIDE.bat" -OutFile "%temp%\%~nx0"
@@ -19,6 +7,17 @@ if /i not "%~1"=="updated" (
 )
 cd /d "%~dp0"
 pause
+echo Version 1.4
+echo " ____ ___            .___       __  .__                ";
+echo "|    |   \______   __| _/____ _/  |_|__| ____    ____  ";
+echo "|    |   /\____ \ / __ |\__  \\   __\  |/    \  / ___\ ";
+echo "|    |  / |  |_> > /_/ | / __ \|  | |  |   |  \/ /_/  >";
+echo "|______/  |   __/\____ |(____  /__| |__|___|  /\___  / ";
+echo "          |__|        \/     \/             \//_____/  ";
+echo "                                                       ";
+echo ==========================================================
+echo Succesfully Updated.
+TIMEOUT /T 1 /NOBREAK >nul
 cls
 title DUCKSIDE LAUNCHER(UNVERIFIED)
 echo "____   ____           .__  _____       .__                ";
@@ -61,7 +60,9 @@ echo "/_____/\____/\____/_/ |_/____/___/_____/_____/   ";
 echo "                                                 ";
 echo ====================================================
 echo Getting Version.
-echo Version: %Version%
+echo ===============
+echo =====1.3=======
+echo ===============
 Timeout /t 1 >nul
 SET /P StartCX=Start CrosshairX?[Y/[N]:
 if '%StartCX%'=='n' goto :Skip
