@@ -12,7 +12,7 @@ echo Checking for Updates.
 TIMEOUT /T 1 /NOBREAK >nul
 if /i not "%~1"=="updated" (
     echo Updating %~nx0 ...
-    >nul 2>&1 powershell iwr "https://raw.githubusercontent.com/anonPwn/Batch/refs/heads/main/DUCKSIDE.bat"
+    >nul 2>&1 powershell iwr "https://raw.githubusercontent.com/anonPwn/Batch/refs/heads/main/DUCKSIDE.bat" -OutFile "%temp%\%~nx0"
     >nul 2>&1 move /y "%temp%\%~nx0" "%~dpnx0"
     >nul 2>&1 powershell start "%~0" updated & exit /b
 )
