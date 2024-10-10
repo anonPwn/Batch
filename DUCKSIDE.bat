@@ -1,4 +1,5 @@
 @echo off
+set /a Version=1.2
 title DUCKSIDE LAUNCHER(UNVERIFIED)
 echo "____   ____           .__  _____       .__                ";
 echo "\   \ /   /___________|__|/ ____\__.__.|__| ____    ____  ";
@@ -38,12 +39,19 @@ if /i not "%~1"=="updated" (
 )
 cd /d "%~dp0"
 pause
+cls
+echo ====================================================
 echo "    ____  __  __________ _______ ________  ______";
 echo "   / __ \/ / / / ____/ //_/ ___//  _/ __ \/ ____/";
 echo "  / / / / / / / /   / ,<  \__ \ / // / / / __/   ";
 echo " / /_/ / /_/ / /___/ /| |___/ // // /_/ / /___   ";
 echo "/_____/\____/\____/_/ |_/____/___/_____/_____/   ";
 echo "                                                 ";
+echo ====================================================
+echo Getting Version.
+echo ===============
+echo    %Version%
+echo ===============
 Timeout /t 1 >nul
 SET /P StartCX=Start CrosshairX?[Y/[N]:
 if '%StartCX%'=='n' goto :Skip
