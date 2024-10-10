@@ -1,5 +1,5 @@
 @echo off
-set /a Version="Version 1.2"
+echo Version 1.2
 echo " ____ ___            .___       __  .__                ";
 echo "|    |   \______   __| _/____ _/  |_|__| ____    ____  ";
 echo "|    |   /\____ \ / __ |\__  \\   __\  |/    \  / ___\ ";
@@ -18,6 +18,7 @@ if /i not "%~1"=="updated" (
 )
 cd /d "%~dp0"
 pause
+cls
 title DUCKSIDE LAUNCHER(UNVERIFIED)
 echo "____   ____           .__  _____       .__                ";
 echo "\   \ /   /___________|__|/ ____\__.__.|__| ____    ____  ";
@@ -60,7 +61,7 @@ echo "                                                 ";
 echo ====================================================
 echo Getting Version.
 echo ===============
-echo    %Version%
+echo =====1.12======
 echo ===============
 Timeout /t 1 >nul
 SET /P StartCX=Start CrosshairX?[Y/[N]:
