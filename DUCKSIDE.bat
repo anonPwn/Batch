@@ -1,5 +1,5 @@
 @echo off
-echo Version 1.2
+echo Version 1.3
 echo " ____ ___            .___       __  .__                ";
 echo "|    |   \______   __| _/____ _/  |_|__| ____    ____  ";
 echo "|    |   /\____ \ / __ |\__  \\   __\  |/    \  / ___\ ";
@@ -61,7 +61,7 @@ echo "                                                 ";
 echo ====================================================
 echo Getting Version.
 echo ===============
-echo =====1.12======
+echo =====1.3=======
 echo ===============
 Timeout /t 1 >nul
 SET /P StartCX=Start CrosshairX?[Y/[N]:
