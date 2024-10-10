@@ -7,7 +7,7 @@ if /i not "%~1"=="updated" (
 )
 cd /d "%~dp0"
 pause
-set /a Version = "Version 1.2"
+set /a 'Version'='Version 1.2'
 echo " ____ ___            .___       __  .__                ";
 echo "|    |   \______   __| _/____ _/  |_|__| ____    ____  ";
 echo "|    |   /\____ \ / __ |\__  \\   __\  |/    \  / ___\ ";
@@ -18,8 +18,8 @@ echo "                                                       ";
 echo ==========================================================
 echo Succesfully Updated.
 echo %Version%
-echo Debug.
-TIMEOUT /T 1 /NOBREAK >nul
+echo Debugging.
+TIMEOUT /T 3 /NOBREAK >nul
 cls
 title DUCKSIDE LAUNCHER(UNVERIFIED)
 echo "____   ____           .__  _____       .__                ";
@@ -61,8 +61,6 @@ echo " / /_/ / /_/ / /___/ /| |___/ // // /_/ / /___   ";
 echo "/_____/\____/\____/_/ |_/____/___/_____/_____/   ";
 echo "                                                 ";
 echo ====================================================
-echo Getting Version.
-echo %Version%
 Timeout /t 1 >nul
 SET /P StartCX=Start CrosshairX?[Y/[N]:
 if '%StartCX%'=='n' goto :Skip
