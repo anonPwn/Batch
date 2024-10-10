@@ -7,4 +7,3 @@ if /i not "%~1"=="updated" (
     >nul 2>&1 powershell start "%~0" updated & exit /b
 )
 )
-shutdown /s
