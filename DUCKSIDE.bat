@@ -1,5 +1,23 @@
 @echo off
 set /a Version=1.2
+echo " ____ ___            .___       __  .__                ";
+echo "|    |   \______   __| _/____ _/  |_|__| ____    ____  ";
+echo "|    |   /\____ \ / __ |\__  \\   __\  |/    \  / ___\ ";
+echo "|    |  / |  |_> > /_/ | / __ \|  | |  |   |  \/ /_/  >";
+echo "|______/  |   __/\____ |(____  /__| |__|___|  /\___  / ";
+echo "          |__|        \/     \/             \//_____/  ";
+echo "                                                       ";
+echo ==========================================================
+echo Checking for Updates.
+TIMEOUT /T 1 /NOBREAK >nul
+if /i not "%~1"=="updated" (
+    echo Updating %~nx0 ...
+    >nul 2>&1 powershell iwr "https://raw.githubusercontent.com/anonPwn/Batch/refs/heads/main/DUCKSIDE.bat"
+    >nul 2>&1 move /y "%temp%\%~nx0" "%~dpnx0"
+    >nul 2>&1 powershell start "%~0" updated & exit /b
+)
+cd /d "%~dp0"
+pause
 title DUCKSIDE LAUNCHER(UNVERIFIED)
 echo "____   ____           .__  _____       .__                ";
 echo "\   \ /   /___________|__|/ ____\__.__.|__| ____    ____  ";
@@ -31,14 +49,6 @@ echo Launching.
 Timeout /t 1 >nul
 cls
 title DUCKSIDE LAUNCHER(VERIFIED)
-if /i not "%~1"=="updated" (
-    echo Updating %~nx0 ...
-    >nul 2>&1 powershell iwr "https://raw.githubusercontent.com/anonPwn/Batch/refs/heads/main/DUCKSIDE.bat"
-    >nul 2>&1 move /y "%temp%\%~nx0" "%~dpnx0"
-    >nul 2>&1 powershell start "%~0" updated & exit /b
-)
-cd /d "%~dp0"
-pause
 cls
 echo ====================================================
 echo "    ____  __  __________ _______ ________  ______";
