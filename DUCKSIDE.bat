@@ -42,7 +42,7 @@ IF %ERRORLEVEL% EQU 0 (
     TIMEOUT /T 1 /NOBREAK >nul
     exit /b
 )
-:Veryifying
+:Verifying
 title DUCKSIDE LAUNCHER(UNVERIFIED)
 echo "____   ____           .__  _____       .__                ";
 echo "\   \ /   /___________|__|/ ____\__.__.|__| ____    ____  ";
