@@ -35,13 +35,14 @@ echo Checking Connection.
 ping -n 2 -w 700 www.google.com | find "bytes=" >nul
 IF %ERRORLEVEL% EQU 0 (
     echo Connection Found.
-    goto Login
+    goto Verifying
 ) ELSE (
     echo No Connection, Relaunch with connection.
     ipconfig /flushdns >nul
     TIMEOUT /T 1 /NOBREAK >nul
     exit /b
 )
+:Veryifying
 title DUCKSIDE LAUNCHER(UNVERIFIED)
 echo "____   ____           .__  _____       .__                ";
 echo "\   \ /   /___________|__|/ ____\__.__.|__| ____    ____  ";
