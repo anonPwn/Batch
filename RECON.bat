@@ -38,10 +38,43 @@ echo "        \/     \/     \/           \/ ";
 echo =========================================
 echo Welcome to Recon.
 echo Recon is a opensource cybersecurity challenge
+echo RULES: No viewing contents in notepad or txt editor.
+echo TASK: Escape
+REM this is a hint, use the type command and use the goto command to goto :Pwned
 :cmd
-set /p "cmd=%CD%>"
+set /p "cmd=RECON:"
 echo %cmd%
 goto cmd
+exit /b
+:Pwned
+cls
+Echo Booting.
+cls
+Echo Booting.
+cls
+Echo Booting...
+cls
+Echo Login
+SET /P user=user:
+if '%user%'=='Admin' (
+    goto pass
+) else (
+    goto invalid
+)
+exit /b
+:pass
+SET /P pass=pass:
+if '%pass%'=='Cookies' (
+    goto LoginAuth
+) else (
+    goto invalid
+)
+exit /b
+:print
+type s.txt
+pause
+
+
 
 
 
