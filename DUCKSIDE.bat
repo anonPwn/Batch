@@ -20,6 +20,7 @@ echo ==========================================================
 echo Succesfully Updated.
 echo %Version%
 echo Debugging.
+echo Succesfully Pushed Update.
 TIMEOUT /T 3 /NOBREAK >nul
 cls
 title DUCKSIDE LAUNCHER(UNVERIFIED)
