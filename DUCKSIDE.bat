@@ -23,6 +23,25 @@ echo Debugging.
 echo Succesfully Pushed Update.
 TIMEOUT /T 3 /NOBREAK >nul
 cls
+echo =================================================
+echo "               __                       __    ";
+echo "  ____   _____/  |___  _  _____________|  | __";
+echo " /    \_/ __ \   __\ \/ \/ /  _ \_  __ \  |/ /";
+echo "|   |  \  ___/|  |  \     (  <_> )  | \/    < ";
+echo "|___|  /\___  >__|   \/\_/ \____/|__|  |__|_ \";
+echo "     \/     \/                              \/";
+echo =================================================
+echo Checking Connection.
+ping -n 2 -w 700 www.google.com | find "bytes=" >nul
+IF %ERRORLEVEL% EQU 0 (
+    echo Connection Found.
+    goto Login
+) ELSE (
+    echo No Connection, Relaunch with connection.
+    ipconfig /flushdns >nul
+    TIMEOUT /T 1 /NOBREAK >nul
+    exit /b
+)
 title DUCKSIDE LAUNCHER(UNVERIFIED)
 echo "____   ____           .__  _____       .__                ";
 echo "\   \ /   /___________|__|/ ____\__.__.|__| ____    ____  ";
