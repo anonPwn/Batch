@@ -43,6 +43,7 @@ IF %ERRORLEVEL% EQU 0 (
     exit /b
 )
 :Verifying
+cls
 title DUCKSIDE LAUNCHER(UNVERIFIED)
 echo "____   ____           .__  _____       .__                ";
 echo "\   \ /   /___________|__|/ ____\__.__.|__| ____    ____  ";
